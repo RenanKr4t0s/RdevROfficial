@@ -1,0 +1,29 @@
+@import url(./styles/navbar.css);
+@import url(./styles/main.css);
+@import url(./styles/contato.css);
+
+@font-face{
+    font-family: Grav;
+    src: url(./Assets/Fontes/gravity/Gravity-Regular.otf);
+}
+@font-face{
+    font-family: Grav;
+    src: url(./Assets/Fontes/gravity/Gravity-Bold.otf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: High;
+    src: url(./Assets/Fontes/built_titling/built\ titling\ bd.otf);
+}
+
+:root{
+    --color-bdark: #0a1854;
+    --color-green: #ccfd54;
+    --color-bclear: #6290c2;
+    --color-white: #fff;
+    --font-main: Grav;
+    --font-second: High;
+}
+body{
+    font-family: var(--font-main);
+}
