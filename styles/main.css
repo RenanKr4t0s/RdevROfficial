@@ -12,7 +12,7 @@
     padding: 2rem 2rem;
 }
 .text-box{
-    margin: 0 1rem;
+    margin: 0 .5rem;
     text-align: center;
 }
 .main__hi{
@@ -35,9 +35,10 @@
     border-radius: 24px;
 
 }
-@media only screen and (min-width: 1080px){
+@media only screen and (min-width: 950px){
     .main{
         flex-direction: row;
+        height: 90vh;
     }
     .text-box{
         margin: 4rem;
@@ -49,29 +50,16 @@
         text-align: end;
     }
     .main__hi{
-        font-size: 8rem;
+        font-size: 6rem;
     }
     .main__description{
-        font-size: 3.5rem;
+        font-size: 2.5rem;
         line-height: 1.5;
         margin: 2.5rem 1rem;   
     }
     .main__action{
         padding: 1rem 1rem;
-        font-size: 3rem;
-    
-    }
-}
-@media only screen and (min-width: 1280px){
-    .main__image{
-        height: 70vh;
-    }
-    .main__hi{
-        font-size: 10rem;
-    }
-    .main__action{
-        padding: 1rem 2rem;
-        font-size: 3.5rem;
+        font-size: 2.5rem;   
     }
 }
 /* Hey */
