@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="styles/reset.css">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body id="index-main">
     <header>
         <div class="navbar">
             <div class="hamburguer" onclick="openHamburguer()">
@@ -16,7 +16,9 @@
                 <div class="bar" id="bar2"></div>
                 <div class="bar" id="bar3"></div>
             </div>
-            <img class="navbar__logo" src="../Assets/All blue.png" alt="">
+            <a href="../index.html">
+                <img class="navbar__logo" src="../Assets/All blue.png" alt="R.dev.R logo">
+            </a>
             <nav class="navbar__bigscreen">
                 <ul class="bigscreen__list">
                     <li class="navitens__item"><a href="#">HOME</a></li></li>
@@ -37,6 +39,14 @@
     </header>
     <div class="main" id="main">
         <img class="main__image" src="Assets/Main.svg" alt="">
+        <div class="text-box">
+            <h2 class="main__hi">Olá!</h2>
+            <p class="main__description">Sou desenvolvedor Web, disposto a entregar soluções criativas para você se destacar online.</p>
+            <a href="https://api.whatsapp.com/send?phone=5511957916485&text= Olá Renan.
+             Gostaria de fazer um orçamento do meu site com você!"
+                class="main__action">Faça um Orçamento
+            </a>
+        </div>
     </div>
     <script src="./script.js"></script>
 </body>

@@ -1,11 +1,77 @@
 .main{
     text-align: center;
+    align-items: center;
     min-height: 95vh;
     background: center/cover url("../Assets/Background.png") ;
+    display: flex;
+    flex-direction: column;
 }
 .main__image{
-    height: 50vh;
+    height: 40vh;
     max-width: 80vw;
-    padding-top: 2rem;
+    padding: 2rem 2rem;
+}
+.text-box{
+    margin: 0 1rem;
+    text-align: center;
+}
+.main__hi{
+    font-family: var(--font-second);
+    font-size: 5rem;
+    color: var(--color-white);
+}
+.main__description{
+    font-size: 2rem;
+    line-height: 1.2;
+    color: var(--color-green);
+    margin: 2rem 0;   
+}
+.main__action{
+    background-color: var(--color-white);
+    padding: .5rem 2rem;
+    font-family: var(--font-second);
+    font-size: 2rem;
+    color: var(--color-bdark);
+    border-radius: 24px;
+
+}
+@media only screen and (min-width: 1080px){
+    .main{
+        flex-direction: row;
+    }
+    .text-box{
+        margin: 4rem;
+    }
+    .main__image{
+        height: 60vh;
+    }
+    .text-box{
+        text-align: end;
+    }
+    .main__hi{
+        font-size: 8rem;
+    }
+    .main__description{
+        font-size: 3.5rem;
+        line-height: 1.5;
+        margin: 2.5rem 1rem;   
+    }
+    .main__action{
+        padding: 1rem 1rem;
+        font-size: 3rem;
+    
+    }
+}
+@media only screen and (min-width: 1280px){
+    .main__image{
+        height: 70vh;
+    }
+    .main__hi{
+        font-size: 10rem;
+    }
+    .main__action{
+        padding: 1rem 2rem;
+        font-size: 3.5rem;
+    }
 }
 /* Hey */

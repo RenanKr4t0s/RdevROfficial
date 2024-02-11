@@ -15,17 +15,26 @@
     flex-direction: row;
     gap: .5rem;
     border: 2px var(--color-white) solid;
+    border-radius: 8px;
     padding: 8px;
 }
 .contato__button{
     width: 2rem;
     height: 2rem;
 }
-.contato__texto{
+.contato__texto-sm{
+    display: inline-block;
     color: var(--color-white);
     font-size: 1rem;
     line-height: 2rem;
 }
+.contato__texto-lg{
+    display: none;
+    color: var(--color-white);
+    font-size: 1rem;
+    line-height: 2rem;
+}
+
 .cta{
     color: var(--color-green);
     font-family: var(--font-second);
@@ -36,7 +45,7 @@
         min-height: 95vh;
     }
     .contato__itens{
-        padding: 6rem;
+        padding: 10rem 10rem 6rem;
         flex-direction: row;
         justify-content: space-around;
     }
@@ -51,7 +60,13 @@
         width: 6rem;
         height: 6rem;
     }
+    .contato__texto-sm{
+        display: none;
+    }
+    .contato__texto-lg{
+        display: inline-block;
+    }
     .cta{
-        font-size: 10rem;
+        font-size: 8rem;
     }
 }
