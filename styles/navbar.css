@@ -50,7 +50,6 @@ transition: height .5s ease-in-out;
 }
 .navitens__active{
     background: var(--color-white);
-    text-decoration: underline;
     padding: 1rem 2rem;
 }
 .navitens__item:hover{

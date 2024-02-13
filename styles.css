@@ -1,6 +1,8 @@
 @import url(./styles/navbar.css);
 @import url(./styles/main.css);
 @import url(./styles/contato.css);
+@import url(./styles/aboutMe.css);
+@import url(./styles/portfolio.css);
 
 @font-face{
     font-family: Grav;
