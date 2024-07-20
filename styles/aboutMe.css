@@ -1,8 +1,8 @@
 .aboutMe{
     text-align: center;
     align-items: center;
-    height: 100vh ;
-    background: center/cover url("../Assets/Background.png") ;
+    min-height: 100vh;
+    background: url("../Assets/Background.png");
     display: flex;
     flex-direction: column;
     color: var(--color-white);
@@ -15,7 +15,7 @@
     padding: 6rem 0 2rem;
 }
 .about__text{
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1.5;
     padding: 2rem;
 }
@@ -49,6 +49,77 @@
     box-shadow: initial;
     box-shadow: -3px 2px var(--color-bclear);
 }
+.about__gif-right-flip{
+    position: relative;
+    transform: rotate(-15deg);
+    right: 3rem;
+    top: 3rem;
+    z-index: 10;
+    box-shadow: 3px 2px var(--color-bclear);
+}
+.about__gif-left-flip{
+    position: relative;
+    transform: rotate(10deg);
+    left: 3rem;
+    top: 2rem;
+    margin-bottom: 3rem;
+    z-index: 9;
+    box-shadow: -3px 2px var(--color-bclear);
+}
+
+.about__img{
+    position: relative;
+    margin-top: 3rem;
+    width: 35vw;
+    height: auto;
+    z-index: 9;
+    box-shadow: initial;
+    box-shadow: 3px -2px var(--color-bclear);
+}
+.about__img-penguin{
+    position: relative;
+    margin-top: 3rem;
+    width: 35vw;
+    height: auto;
+    z-index: 9;
+    box-shadow: initial;
+    box-shadow: 3px -2px var(--color-bclear);
+}
+.about__end-section{
+    text-align: center;
+    align-items: center;
+    min-height: 10rem;
+    background: url("../Assets/Background.png");
+    display: flex;
+    flex-direction: column;
+}
+
+#toggleSection {
+    display: none;
+}
+
+/* Estilo para o botão */
+.about__button{
+    display: inline-block;
+    gap: .5rem;
+    border: 1px var(--color-green) solid;
+    border-radius: 8px;
+    color: var(--color-green);
+    padding: 8px 16px;
+    margin-top: 1.5rem;
+}
+
+#section {
+    display: none;
+}
+
+/* Mostra a seção com o checkbox marcado */
+#toggleSection:checked + label + #section {
+    display: block;
+}
+
+
+
 @media only screen and (min-width: 811px){
     .about__section1{
         display: flex;
@@ -60,15 +131,17 @@
         font-size: 6rem;
     }
     .about__text{
-        font-size: 2rem;
+        font-size: 1.5rem;
         text-align: start;
     }
     .about__images{
         width: 35vw;
     }
-
     .about__img-right-flip{
         width: 15vw;
+    }
+    .about__img{
+        width: 10vw;
     }
 
     .about__img-left-flip{
