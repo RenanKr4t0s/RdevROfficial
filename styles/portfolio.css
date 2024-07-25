@@ -7,11 +7,11 @@
     flex-direction: column;
 }
 .development{
-    font-size: 5rem;
+    font-size: 3rem;
     line-height: 1.5;
     font-family:var(--font-second);
     color: var(--color-green);
-    padding-top: 15vh;
+    padding-top: 3rem;
 }
 .portfolio__excuse{
     color: var(--color-white);
@@ -19,6 +19,80 @@
     font-size: 1.5rem;
     padding: 2rem 1rem 4rem;
 }
+.portfolio__container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    padding: 2rem;
+    width: 90vw;
+    justify-content: center;
+}
+.portfolio__box{
+    background-color: var(--color-green);
+    border-radius: 16px;
+    max-width: 500px;
+    padding: 1rem;
+    width: 90vw;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+}
+.portfolio__img-pc{
+    border: 2px solid;
+    width: 70vw;
+    max-width: 450px;
+    margin: 0 1rem 0 0;
+}
+.portfolio__img-cel{
+    border: 2px solid;
+    width: 12vw;
+    max-width: 100px;
+    position: relative;
+    margin: -20% 75%;
+}
+.portfolio__title{
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    margin: 4rem 0 2rem 0;
+}
+.portfolio__text{
+    font-family: var(--font-main);
+    font-size: 1rem;
+    margin: 0 1rem 0 0;
+    line-height: 1.5rem;
+}
+.portfolio__button-box{
+    align-self: end;
+    width: 8rem;
+    background-color:var(--color-bclear);
+    display: flex;
+    justify-content: space-evenly;
+    padding: .5rem 0;
+    border-radius: 16px;
+    margin: 1rem 0;
+}
+.portfolio__button{
+    width: 3rem;
+}
+.portfolio__build-text{
+    font-size: 1.5rem;
+}
+.portfolio__tech-box{
+    background-color:var(--color-bdark);
+    display: flex;
+    color:var(--color-white);
+    justify-content: space-between;
+    align-items: center;
+    padding: .5rem 1rem;
+    border-radius: 16px;
+    margin: .5rem 0;
+}
+.portfolio__tech-box div{
+    display: flex;
+    gap: .5rem;
+}
+
+
 @media only screen and (min-width: 950px){
     .development{
         font-size: 6rem;
@@ -26,4 +100,11 @@
     .portfolio__excuse{
         font-size: 2.5rem;
     }
+    .portfolio__container{
+    display: flex;
+    padding: 2rem;
+    width: 90vw;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
 }
