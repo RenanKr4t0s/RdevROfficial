@@ -25,6 +25,20 @@ time, mark, audio, video {
 	color: unset;
 	text-decoration: none;
 }
+
+estou desenvolvendo uma página com html e css puro e na index eu fico com uma margem branca abaixo de toda a página, depois de toda a altura do viewport, já verifiquei e meus elementos estão dando menos de 100 vh, o que pode estar acontecendo?
+ChatGPT
+Esse problema de margem branca na parte inferior da página geralmente ocorre devido a estilos ou comportamentos específicos do navegador. Aqui estão algumas verificações e correções que você pode tentar:
+
+Reset de CSS: Certifique-se de que você está usando um reset de CSS para eliminar margens e paddings padrão do navegador. Um reset comum é o seguinte:
+
+css
+Copiar código
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {

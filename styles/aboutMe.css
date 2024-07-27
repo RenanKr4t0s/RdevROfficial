@@ -2,7 +2,7 @@
     text-align: center;
     align-items: center;
     min-height: 100vh;
-    background: url("../Assets/Background.png");
+    background: url("../Assets/Images/Main/background.png");
     display: flex;
     flex-direction: column;
     color: var(--color-white);
@@ -66,7 +66,6 @@
     z-index: 9;
     box-shadow: -3px 2px var(--color-bclear);
 }
-
 .about__img{
     position: relative;
     margin-top: 3rem;
@@ -89,7 +88,6 @@
     text-align: center;
     align-items: center;
     min-height: 10rem;
-    background: url("../Assets/Background.png");
     display: flex;
     flex-direction: column;
 }
@@ -101,21 +99,41 @@
 /* Estilo para o botão */
 .about__button{
     display: inline-block;
-    gap: .5rem;
+    font-family:var(--font-second);
+    font-size: 2rem;
+    margin: 1rem;
     border: 1px var(--color-green) solid;
     border-radius: 8px;
     color: var(--color-green);
     padding: 8px 16px;
     margin-top: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.about__button:hover{
+    background-color: var(--color-bclear);
+    color: var(--color-green);
 }
 
 #section {
+    height: 0;
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, opacity 1.5s ease;
+}
+#section *{
     display: none;
 }
 
 /* Mostra a seção com o checkbox marcado */
 #toggleSection:checked + label + #section {
-    display: block;
+    height: 3600px;
+    max-height: 3600px;
+    opacity: 1;
+}
+#toggleSection:checked + label + #section * {
+    display: inline-block;
 }
 
 
@@ -146,5 +164,15 @@
 
     .about__img-left-flip{
         width: 15vw;
+    }
+    #toggleSection:checked + label + #section {
+        height: 3000px;
+        max-height: 3000px;
+    }
+}
+@media only screen and (min-width: 1080px){
+    #toggleSection:checked + label + #section {
+        height: 2500px;
+        max-height: 2500px;
     }
 }

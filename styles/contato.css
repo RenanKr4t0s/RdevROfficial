@@ -1,6 +1,6 @@
 .contato{
     text-align: center;
-    background: center/cover repeat url("../Assets/Background.png") ;
+    background: center/cover repeat url("../Assets/Images/Main/background.png");
     min-height: 100vh;
 }
 .contato__itens{
@@ -19,14 +19,31 @@
     padding: 8px;
 }
 .contato__button{
-    width: 2rem;
-    height: 2rem;
+    width: 4rem;
 }
+.contato__link-box{
+    border-radius: 100px;
+    padding: 1rem;
+    background-color: var(--color-green);
+    color: var(--color-bdark);
+    font-size:4rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+.contato__link-box:hover{
+    background-color: var(--color-bclear);
+    color: var(--color-green);
+}
+
 .contato__texto-sm{
     display: inline-block;
     color: var(--color-white);
-    font-size: 1rem;
-    line-height: 2rem;
+    font-size: 1.5rem;
+    line-height: 5rem;
+    padding: 0  0 0 2rem;
+    text-align: center;
+    overflow: hidden;
+    max-width: 100%;
+
 }
 .contato__texto-lg{
     display: none;
@@ -57,8 +74,8 @@
         padding: 8px;
     }
     .contato__button{
-        width: 6rem;
-        height: 6rem;
+        width: 4rem;
+        height: 4rem;
     }
     .contato__texto-sm{
         display: none;

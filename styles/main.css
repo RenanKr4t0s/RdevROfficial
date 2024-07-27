@@ -1,13 +1,13 @@
 .main{
     text-align: center;
     align-items: center;
-    min-height: 95vh;
-    background: center/cover url("../Assets/Background.png") ;
+    min-height: calc(90vh - 3rem);
+    background: center/cover url("../Assets/Images/Main/background.png");
     display: flex;
     flex-direction: column;
 }
 .main__image{
-    height: 40vh;
+    height: 30vh;
     max-width: 80vw;
     padding: 2rem 2rem;
 }
@@ -17,7 +17,7 @@
 }
 .main__hi{
     font-family: var(--font-second);
-    font-size: 5rem;
+    font-size: 4rem;
     color: var(--color-white);
 }
 .main__description{
@@ -34,14 +34,62 @@
     color: var(--color-bdark);
     border-radius: 24px;
 }
+.main__icon-box{
+    background-color: var(--color-green);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    width: 100vw;
+    height: 8vh;
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
 .main__action:hover{
     background-color: var(--color-bclear);
     color: var(--color-green);
 }
-@media only screen and (min-width: 950px){
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--color-green);
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 1rem;
+    justify-content: center;
+    height: 10vh;
+}
+
+.carousel-content {
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll 10s linear infinite;
+}
+
+.carousel-content i {
+    font-family: var(--font-second);
+    display: inline-block;
+    font-size:2rem;
+    color: var(--color-bdark);
+    margin: 0 1rem;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-20%);
+    }
+}
+
+@media only screen and (min-width: 990px){
     .main{
         flex-direction: row;
-        height: 90vh;
+        height: calc(90vh - 3rem);
     }
     .text-box{
         margin: 4rem;
@@ -56,13 +104,21 @@
         font-size: 6rem;
     }
     .main__description{
+        font-size: 2rem;
+        line-height: 1;
+        margin: 2.5rem 1rem;   
+    }
+    .carousel-content i {
+        font-size: 3rem;
+    }
+}
+@media only screen and (min-width: 1080px){
+    .main__description{
         font-size: 2.5rem;
         line-height: 1.5;
-        margin: 2.5rem 1rem;   
     }
     .main__action{
         padding: 1rem 1rem;
         font-size: 2.5rem;   
     }
 }
-/* Hey */
