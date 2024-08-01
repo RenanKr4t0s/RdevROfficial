@@ -1,99 +1,124 @@
-.navbar{
-    background-color: var(--color-green);
-    width: 100%;
-    height: 2.5rem;
-    padding: .5rem;
+/* Navbar principal */
+.navbar {
     display: flex;
     justify-content: flex-start;
     gap: 1rem;
+    width: 100%;
+    height: 2.5rem;
+    padding: .5rem;
+    background-color: var(--color-green);
 }
+
+/* Ícone do menu hamburguer */
 .hamburguer {
     width: 2rem;
     height: 1rem;
     padding: 1rem .5rem;
     cursor: pointer;
 }
-.bar{
-    height: 5px;
-    width: 100%;
-    background-color: var(--color-bdark);
+
+/* Barras do ícone hamburguer */
+.bar {
     display: block;
+    width: 100%;
+    height: 5px;
+    background-color: var(--color-bdark);
     border-radius: 5px;
 }
+
+/* Transformações específicas das barras */
 #bar1 {
     transform: translateY(-4px);
 }
+
 #bar3 {
     transform: translateY(4px);
 }
-.navbar__logo{
+
+/* Logo na navbar */
+.navbar__logo {
+    width: 11rem;
     margin-right: 3rem;
     padding: .2rem;
-    width: 11rem;
 }
-.navitens{
-height: 20rem;
-font-family: var(--font-main);
-background-color: var(--color-green);
-line-height: 2rem;
-font-size: 1.5rem;
-transition: height .5s ease-in-out;
-/*transition: color 2s ease-in-out;
-*/
+
+/* Itens de navegação */
+.navitens {
+    height: 20rem;
+    font-family: var(--font-main);
+    font-size: 1.5rem;
+    line-height: 2rem;
+    background-color: var(--color-green);
+    transition: height .5s ease-in-out;
+    /* transition: color 2s ease-in-out; */
 }
-.navitens__item{
+
+/* Estilo dos itens de navegação */
+.navitens__item {
+    height: 2.2rem;
+    padding: 1rem;
+    color: var(--color-bdark);
     background: var(--color-green);
     font-family: var(--font-second);
-    color:var(--color-bdark);
-    padding: 1rem;
-    height: 2.2rem;
 }
-.navitens__active{
-    background: var(--color-white);
+
+/* Estilo do item ativo */
+.navitens__active {
     padding: 1rem 2rem;
-}
-.navitens__item:hover{
     background: var(--color-white);
 }
-.hider{
-height: 0;
-overflow: hidden;
+
+/* Efeito hover nos itens de navegação */
+.navitens__item:hover {
+    background: var(--color-white);
 }
-.list{
-height: 20rem;
-overflow: hidden;
+
+/* Estilo para ocultar elementos */
+.hider {
+    height: 0;
+    overflow: hidden;
 }
-.list-hider{
-height: 0;
-transition: height .5s ease-in-out 1s;
+
+/* Estilo para listas */
+.list {
+    height: 20rem;
+    overflow: hidden;
 }
-.navbar__bigscreen{
+
+/* Estilo para esconder listas */
+.list-hider {
+    height: 0;
+    transition: height .5s ease-in-out 1s;
+}
+
+/* Navbar para telas grandes */
+.navbar__bigscreen {
     display: none;
 }
 
-@media only screen and (min-width: 811px){
-    .navbar{
+/* Estilos responsivos para telas maiores (min-width: 811px) */
+@media only screen and (min-width: 811px) {
+    .navbar {
         justify-content: space-between;
-        padding: 0;
         height: 3rem;
+        padding: 0;
     }
-    .hamburguer{
+    .hamburguer {
         display: none;
     }
-    .navbar__bigscreen{
+    .navbar__bigscreen {
         display: inline-block;
         margin-right: 1rem;
     }
-    .bigscreen__list{
-        margin-left: 0;
+    .bigscreen__list {
         display: flex;
         flex-direction: row;
         gap: 1rem;
+        margin-left: 0;
     }
-    .navitens__item{
+    .navitens__item {
         padding: 0.4rem;
         font-size: 2rem;
         font-weight: bold;
     }
-
 }

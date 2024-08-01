@@ -1,132 +1,165 @@
-.portfolio{
-    text-align: center;
-    align-items: center;
-    min-height: 95vh;
-    background: center/cover url("../Assets/Images/Main/background.png");
+/* Estilos gerais da seção do portfólio */
+.portfolio {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 95vh;
+    background: center/cover url("../Assets/Images/Main/background.png");
 }
-.development{
+
+/* Título de desenvolvimento */
+.development {
+    font-family: var(--font-second);
     font-size: 3rem;
     line-height: 1.5;
-    font-family:var(--font-second);
     color: var(--color-green);
     padding-top: 3rem;
 }
-.portfolio__excuse{
-    color: var(--color-white);
+
+/* Texto de desculpas */
+.portfolio__text-to-link {
     font-family: var(--font-main);
     font-size: 1.5rem;
+    color: var(--color-white);
     padding: 2rem 1rem 2rem;
 }
-.portfolio__icon{
-    font-size:3rem;
+
+/* Ícones do portfólio */
+.portfolio__icon {
+    font-size: 3rem;
     color: var(--color-bdark);
     transition: color 0.3s ease, background-color 0.3s ease;
 }
-.portfolio__icon:hover{
-    color: var(--color-green)
+
+/* Efeito hover no ícone do portfólio */
+.portfolio__icon:hover {
+    color: var(--color-green);
 }
-.portfolio__icon-clear{
-    font-size:1.5rem;
-    color: var(--color-bclear)
+
+/* Ícone com cor clara */
+.portfolio__icon-clear {
+    font-size: 1.5rem;
+    color: var(--color-bclear);
 }
-.portfolio__container{
+
+/* Contêiner dos itens do portfólio */
+.portfolio__container {
     display: flex;
     flex-wrap: wrap;
-    gap: 4rem;
-    padding: 2rem;
-    width: 90vw;
     justify-content: center;
-}
-.portfolio__box{
-    background-color: var(--color-green);
-    margin-left: 1rem;
-    border-radius: 16px;
-    max-width: 500px;
-    padding: 1rem;
+    gap: 4rem;
     width: 90vw;
-    text-align: start;
+    padding: 2rem;
+}
+
+/* Caixa de cada item do portfólio */
+.portfolio__box {
     display: flex;
     flex-direction: column;
+    text-align: start;
+    width: 90vw;
+    max-width: 500px;
+    padding: 1rem;
+    margin-left: 1rem;
+    background-color: var(--color-green);
+    border-radius: 16px;
 }
-.portfolio__img-pc{
-    border: 2px solid;
+
+/* Imagem do PC */
+.portfolio__img-pc {
     width: 70vw;
     max-width: 450px;
-    margin: 0 1rem 0 1rem;
-}
-.portfolio__img-cel{
+    margin: 0 1rem;
     border: 2px solid;
+}
+
+/* Imagem do celular */
+.portfolio__img-cel {
     width: 12vw;
     max-width: 100px;
-    position: relative;
     margin: -20% 75%;
+    border: 2px solid;
+    position: relative;
 }
-.portfolio__title{
+
+/* Título do portfólio */
+.portfolio__title {
     font-family: var(--font-main);
     font-size: 1.5rem;
     margin: 4rem 0 2rem 1rem;
 }
-.portfolio__text{
+
+/* Texto do portfólio */
+.portfolio__text {
     font-family: var(--font-main);
     font-size: 1rem;
-    margin: 0 1rem 0 1rem;
     line-height: 1.5rem;
+    margin: 0 1rem;
 }
-.portfolio__text-app{
+
+/* Texto específico do app */
+.portfolio__text-app {
     font-size: 1.5rem;
     line-height: 2rem;
 }
-.portfolio__button-box{
-    align-self: end;
-    width: 8rem;
-    background-color:var(--color-bclear);
+
+/* Caixa dos botões do portfólio */
+.portfolio__button-box {
     display: flex;
     justify-content: space-evenly;
+    align-self: end;
+    width: 8rem;
     padding: .5rem 0;
-    border-radius: 16px;
     margin: 1rem;
+    background-color: var(--color-bclear);
+    border-radius: 16px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
-.portfolio__button-box:hover{
-    background-color:var(--color-bdark)
+
+/* Efeito hover na caixa dos botões */
+.portfolio__button-box:hover {
+    background-color: var(--color-bdark);
 }
-.portfolio__button{
+
+/* Botões do portfólio */
+.portfolio__button {
     width: 3rem;
 }
-.portfolio__build-text{
+
+/* Texto de construção do portfólio */
+.portfolio__build-text {
     font-size: 1.5rem;
 }
-.portfolio__tech-box{
-    background-color:var(--color-bdark);
-    font-size: 2rem;
+
+/* Caixa de tecnologias do portfólio */
+.portfolio__tech-box {
     display: flex;
-    color:var(--color-white);
     justify-content: space-between;
     align-items: center;
+    font-size: 2rem;
+    color: var(--color-white);
+    background-color: var(--color-bdark);
     padding: .5rem 1rem;
     border-radius: 16px;
     margin: .5rem 1rem;
 }
-.portfolio__tech-box div{
+
+/* Sub-elementos dentro da caixa de tecnologias */
+.portfolio__tech-box div {
     display: flex;
     gap: .5rem;
 }
 
-
-@media only screen and (min-width: 950px){
-    .development{
+/* Estilos responsivos para telas maiores (min-width: 950px) */
+@media only screen and (min-width: 950px) {
+    .development {
         font-size: 6rem;
     }
-    .portfolio__excuse{
+    .portfolio__text-to-link{
         font-size: 2.5rem;
     }
-    .portfolio__container{
-    display: flex;
-    padding: 2rem;
-    width: 90vw;
-    flex-wrap: wrap;
-    gap: 3rem;
-}
+    .portfolio__container {
+        gap: 3rem;
+    }
 }

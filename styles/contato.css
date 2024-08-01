@@ -1,89 +1,107 @@
-.contato{
+/* Estilo principal para a seção .contato */
+.contato {
     text-align: center;
     background: center/cover repeat url("../Assets/Images/Main/background.png");
     min-height: 100vh;
 }
-.contato__itens{
-    padding: 3rem 1.5rem;
+
+/* Estilo para os itens de contato */
+.contato__itens {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     gap: 1rem;
+    padding: 3rem 1.5rem;
 }
-.contato__link{
+
+/* Estilo para links de contato */
+.contato__link {
     display: flex;
     flex-direction: row;
+    align-items: center;
     gap: .5rem;
+    padding: 8px;
     border: 2px var(--color-white) solid;
     border-radius: 8px;
-    padding: 8px;
 }
-.contato__button{
+
+/* Estilo para o botão de contato */
+.contato__button {
     width: 4rem;
 }
-.contato__link-box{
-    border-radius: 100px;
+
+/* Estilo para a caixa de link de contato */
+.contato__link-box {
     padding: 1rem;
-    background-color: var(--color-green);
+    font-size: 4rem;
     color: var(--color-bdark);
-    font-size:4rem;
+    background-color: var(--color-green);
+    border-radius: 100px;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
-.contato__link-box:hover{
+
+/* Estilo para o efeito hover na caixa de link de contato */
+.contato__link-box:hover {
     background-color: var(--color-bclear);
     color: var(--color-green);
 }
 
-.contato__texto-sm{
+/* Estilo para o texto pequeno */
+.contato__texto-sm {
     display: inline-block;
     color: var(--color-white);
     font-size: 1.5rem;
-    line-height: 5rem;
-    padding: 0  0 0 2rem;
+    line-height: 3rem;
+    padding-left: 2rem;
     text-align: center;
     overflow: hidden;
     max-width: 100%;
-
 }
-.contato__texto-lg{
+
+/* Estilo para o texto grande (inicialmente oculto) */
+.contato__texto-lg {
     display: none;
     color: var(--color-white);
     font-size: 1rem;
     line-height: 2rem;
 }
 
-.cta{
+/* Estilo para chamadas à ação (CTA) */
+.cta {
     color: var(--color-green);
     font-family: var(--font-second);
     font-size: 5rem;
 }
-@media only screen and (min-width: 811px){
-    .contato{
+
+/* Estilos responsivos para telas maiores (min-width: 811px) */
+@media only screen and (min-width: 811px) {
+    .contato {
         min-height: 95vh;
     }
-    .contato__itens{
-        padding: 10rem 10rem 6rem;
+    .contato__itens {
         flex-direction: row;
         justify-content: space-around;
+        padding: 10rem 10rem 6rem;
     }
-    .contato__link{
+    .contato__link {
         flex-direction: column;
         align-items: center;
         gap: .5rem;
         border: none;
         padding: 8px;
     }
-    .contato__button{
+    .contato__button {
         width: 4rem;
         height: 4rem;
     }
-    .contato__texto-sm{
+    .contato__texto-sm {
         display: none;
+        line-height: 5rem;
     }
-    .contato__texto-lg{
+    .contato__texto-lg {
         display: inline-block;
     }
-    .cta{
+    .cta {
         font-size: 8rem;
     }
 }

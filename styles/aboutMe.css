@@ -1,120 +1,144 @@
-.aboutMe{
-    text-align: center;
-    align-items: center;
-    min-height: 100vh;
-    background: url("../Assets/Images/Main/background.png");
+/* Estilo principal para a seção .aboutMe */
+.aboutMe {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    background: url("../Assets/Images/Main/background.png");
     color: var(--color-white);
     font-family: var(--font-main);
 }
-.about__title{
+
+/* Estilo para o título na seção About */
+.about__title {
+    padding: 6rem 0 2rem;
     color: var(--color-green);
     font-family: var(--font-second);
     font-size: 4rem;
-    padding: 6rem 0 2rem;
-}
-.about__text{
-    font-size: 1rem;
-    line-height: 1.5;
-    padding: 2rem;
-}
-.about__strong{
-    color: var(--color-green);
-}
-.about__images{
-    align-items: center;
-    display: flex;
-    flex-direction: column;
 }
 
-.about__img-right-flip{
+/* Estilo para o texto na seção About */
+.about__text {
+    padding: 2rem;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+/* Estilo para o texto destacado na seção About */
+.about__strong {
+    color: var(--color-green);
+}
+
+/* Estilo para as imagens na seção About */
+.about__images {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para imagem com rotação à direita */
+.about__img-right-flip {
     position: relative;
     width: 35vw;
     height: auto;
-    transform: rotate(-10deg);
-    right: 3rem;
     top: 1rem;
+    right: 3rem;
+    transform: rotate(-10deg);
     z-index: 10;
     box-shadow: 3px 2px var(--color-bclear);
 }
-.about__img-left-flip{
+
+/* Estilo para imagem com rotação à esquerda */
+.about__img-left-flip {
     position: relative;
     width: 35vw;
     height: auto;
-    transform: rotate(15deg);
-    left: 3rem;
     bottom: 1rem;
+    left: 3rem;
+    transform: rotate(15deg);
     z-index: 9;
-    box-shadow: initial;
     box-shadow: -3px 2px var(--color-bclear);
 }
-.about__gif-right-flip{
+
+/* Estilo para GIF com rotação à direita */
+.about__gif-right-flip {
     position: relative;
-    transform: rotate(-15deg);
     right: 3rem;
     top: 3rem;
+    transform: rotate(-15deg);
     z-index: 10;
     box-shadow: 3px 2px var(--color-bclear);
 }
-.about__gif-left-flip{
+
+/* Estilo para GIF com rotação à esquerda */
+.about__gif-left-flip {
     position: relative;
-    transform: rotate(10deg);
     left: 3rem;
     top: 2rem;
     margin-bottom: 3rem;
+    transform: rotate(10deg);
     z-index: 9;
     box-shadow: -3px 2px var(--color-bclear);
 }
-.about__img{
+
+/* Estilo para imagem comum */
+.about__img {
     position: relative;
     margin-top: 3rem;
     width: 35vw;
     height: auto;
     z-index: 9;
-    box-shadow: initial;
     box-shadow: 3px -2px var(--color-bclear);
-}
-.about__img-penguin{
-    position: relative;
-    margin-top: 3rem;
-    width: 35vw;
-    height: auto;
-    z-index: 9;
-    box-shadow: initial;
-    box-shadow: 3px -2px var(--color-bclear);
-}
-.about__end-section{
-    text-align: center;
-    align-items: center;
-    min-height: 10rem;
-    display: flex;
-    flex-direction: column;
 }
 
-#toggleSection {
-    display: none;
+/* Estilo para imagem de pinguim */
+.about__img-penguin {
+    position: relative;
+    margin-top: 3rem;
+    width: 35vw;
+    height: auto;
+    z-index: 9;
+    box-shadow: 3px -2px var(--color-bclear);
+}
+
+/* Estilo para a seção final */
+.about__end-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 10rem;
 }
 
 /* Estilo para o botão */
-.about__button{
+.about__button {
     display: inline-block;
-    font-family:var(--font-second);
-    font-size: 2rem;
     margin: 1rem;
+    margin-top: 1.5rem;
+    padding: 8px 16px;
+    color: var(--color-green);
+    background-color: transparent;
+    font-family: var(--font-second);
+    font-size: 2rem;
     border: 1px var(--color-green) solid;
     border-radius: 8px;
-    color: var(--color-green);
-    padding: 8px 16px;
-    margin-top: 1.5rem;
     cursor: pointer;
     transition: color 0.3s ease, background-color 0.3s ease;
 }
-.about__button:hover{
+
+/* Estilo para o efeito hover no botão */
+.about__button:hover {
     background-color: var(--color-bclear);
     color: var(--color-green);
 }
 
+/* Estilo para a seção toggle */
+#toggleSection {
+    display: none;
+}
+
+/* Estilo para a seção escondida */
 #section {
     height: 0;
     max-height: 0;
@@ -122,55 +146,54 @@
     overflow: hidden;
     transition: max-height 0.5s ease, opacity 1.5s ease;
 }
-#section *{
+
+/* Estilo para os elementos dentro da seção escondida */
+#section * {
     display: none;
 }
 
-/* Mostra a seção com o checkbox marcado */
+/* Mostra a seção quando o checkbox está marcado */
 #toggleSection:checked + label + #section {
     height: 3600px;
     max-height: 3600px;
     opacity: 1;
 }
+
 #toggleSection:checked + label + #section * {
     display: inline-block;
 }
 
-
-
-@media only screen and (min-width: 811px){
-    .about__section1{
+/* Estilos responsivos para telas maiores (min-width: 811px) */
+@media only screen and (min-width: 811px) {
+    .about__section1 {
         display: flex;
     }
-    .about__text{
+    .about__text {
         width: 55vw;
+        text-align: start;
+        font-size: 1.5rem;
     }
-    .about__title{
+    .about__title {
         font-size: 6rem;
     }
-    .about__text{
-        font-size: 1.5rem;
-        text-align: start;
-    }
-    .about__images{
+    .about__images {
         width: 35vw;
     }
-    .about__img-right-flip{
+    .about__img-right-flip,
+    .about__img-left-flip {
         width: 15vw;
     }
-    .about__img{
+    .about__img {
         width: 10vw;
-    }
-
-    .about__img-left-flip{
-        width: 15vw;
     }
     #toggleSection:checked + label + #section {
         height: 3000px;
         max-height: 3000px;
     }
 }
-@media only screen and (min-width: 1080px){
+
+/* Estilos responsivos para telas ainda maiores (min-width: 1080px) */
+@media only screen and (min-width: 1080px) {
     #toggleSection:checked + label + #section {
         height: 2500px;
         max-height: 2500px;

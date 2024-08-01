@@ -1,82 +1,101 @@
-.main{
-    text-align: center;
-    align-items: center;
-    min-height: calc(90vh - 3rem);
-    background: center/cover url("../Assets/Images/Main/background.png");
+/* Estilo principal para a seção .main */
+.main {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: calc(90vh - 3rem);
+    background: center/cover url("../Assets/Images/Main/background.png");
 }
-.main__image{
+
+/* Estilo para a imagem principal */
+.main__image {
     height: 30vh;
     max-width: 80vw;
     padding: 2rem 2rem;
 }
-.text-box{
+
+/* Estilo para caixas de texto */
+.text-box {
     margin: 0 .5rem;
     text-align: center;
 }
-.main__hi{
+
+/* Estilo para o texto de saudação */
+.main__hi {
     font-family: var(--font-second);
     font-size: 4rem;
     color: var(--color-white);
 }
-.main__description{
+
+/* Estilo para a descrição */
+.main__description {
     font-size: 2rem;
     line-height: 1.2;
     color: var(--color-green);
-    margin: 2rem 0;   
+    margin: 2rem 0;
 }
-.main__action{
-    background-color: var(--color-white);
+
+/* Estilo para botões de ação */
+.main__action {
+    display: inline-block;
     padding: .5rem 2rem;
     font-family: var(--font-second);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--color-bdark);
+    background-color: var(--color-white);
     border-radius: 24px;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
-.main__icon-box{
-    background-color: var(--color-green);
-    display: flex;
-    align-content: center;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    width: 100vw;
-    height: 8vh;
-    transition: color 0.3s ease, background-color 0.3s ease;
-}
-.main__action:hover{
+
+/* Estilo para o efeito hover nos botões de ação */
+.main__action:hover {
     background-color: var(--color-bclear);
     color: var(--color-green);
 }
 
+/* Estilo para a caixa de ícones */
+.main__icon-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    width: 100vw;
+    height: 8vh;
+    background-color: var(--color-green);
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+/* Estilo para o carrossel */
 .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     width: 100%;
+    height: 10vh;
     overflow: hidden;
     white-space: nowrap;
     background-color: var(--color-green);
-    display: flex;
-    align-content: center;
-    align-items: center;
-    gap: 1rem;
-    justify-content: center;
-    height: 10vh;
 }
 
+/* Estilo para o conteúdo do carrossel */
 .carousel-content {
     display: inline-block;
     white-space: nowrap;
     animation: scroll 10s linear infinite;
 }
 
+/* Estilo para ícones dentro do carrossel */
 .carousel-content i {
-    font-family: var(--font-second);
     display: inline-block;
-    font-size:2rem;
+    font-family: var(--font-second);
+    font-size: 2rem;
     color: var(--color-bdark);
     margin: 0 1rem;
 }
 
+/* Animação de rolagem do carrossel */
 @keyframes scroll {
     0% {
         transform: translateX(0);
@@ -86,39 +105,40 @@
     }
 }
 
-@media only screen and (min-width: 990px){
-    .main{
+/* Estilos para telas maiores (min-width: 990px) */
+@media only screen and (min-width: 990px) {
+    .main {
         flex-direction: row;
         height: calc(90vh - 3rem);
     }
-    .text-box{
+    .text-box {
         margin: 4rem;
-    }
-    .main__image{
-        height: 60vh;
-    }
-    .text-box{
         text-align: end;
     }
-    .main__hi{
+    .main__image {
+        height: 60vh;
+    }
+    .main__hi {
         font-size: 6rem;
     }
-    .main__description{
+    .main__description {
         font-size: 2rem;
         line-height: 1;
-        margin: 2.5rem 1rem;   
+        margin: 2.5rem 1rem;
     }
     .carousel-content i {
         font-size: 3rem;
     }
 }
-@media only screen and (min-width: 1080px){
-    .main__description{
+
+/* Estilos para telas maiores (min-width: 1080px) */
+@media only screen and (min-width: 1080px) {
+    .main__description {
         font-size: 2.5rem;
         line-height: 1.5;
     }
-    .main__action{
+    .main__action {
         padding: 1rem 1rem;
-        font-size: 2.5rem;   
+        font-size: 2.5rem;
     }
 }
